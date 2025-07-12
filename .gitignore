@@ -2,6 +2,7 @@
 # Private Assets
 #-------------------------
 1.DoNotUpload/
+build/*
 modules/**/Database/Migrations/*
 !modules/**/Database/Migrations/.gitkeep
 modules/**/Database/Seeds/*
