@@ -1,5 +1,6 @@
-FROM php:8.1-apache
+FROM php:8.2-apache
 
+# Install system dependencies for PHP extensions
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -15,6 +16,8 @@ RUN apt-get update && apt-get install -y \
     nano \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install \
+        mysqli \
+        pdo \
         pdo_mysql \
         mbstring \
         exif \
@@ -47,3 +50,5 @@ EXPOSE 80
 COPY docker/entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
+# ENTRYPOINT [ "sh", "-c" ]
+# CMD [ "/entrypoint.sh" ]
