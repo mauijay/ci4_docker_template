@@ -39,6 +39,9 @@
         "sort-packages": true
     },
     "scripts": {
-        "test": "phpunit"
+        "test": "phpunit",
+        "post-install-cmd": [
+            "@php -r \"file_exists('.env') || copy('env.example', '.env');\""
+        ]
     }
 }

@@ -213,21 +213,20 @@
             <li class="menu-toggle">
                 <button id="menuToggle">&#9776;</button>
             </li>
-            <li class="menu-item hidden"><a href="#">Home</a></li>
-            <li class="menu-item hidden"><a href="https://codeigniter.com/user_guide/" target="_blank">Docs</a>
+            <li class="menu-item hidden"><a href="/">Home</a></li>
+            <li class="menu-item hidden"><a href="/admin">Admin</a>
             </li>
-            <li class="menu-item hidden"><a href="https://forum.codeigniter.com/" target="_blank">Community</a></li>
-            <li class="menu-item hidden"><a
-                    href="https://codeigniter.com/contribute" target="_blank">Contribute</a>
-            </li>
+            <li class="menu-item hidden"><a href="/tests">Tests</a></li>
+            <li class="menu-item hidden"><a href="/stuff">Stuff</a>
         </ul>
     </div>
 
     <div class="heroe">
 
-        <h1>Welcome to CodeIgniter <?= CodeIgniter\CodeIgniter::CI_VERSION ?></h1>
+        <h1>Welcome to  Jays's CodeIgniter <?= CodeIgniter\CodeIgniter::CI_VERSION ?></h1>
 
-        <h2>The small framework with powerful features</h2>
+        <h2>The docker starter template</h2>
+        <h2>jay = <?= getenv('MY_ENV_TEST'); ?></h3>
 
     </div>
 

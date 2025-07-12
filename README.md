@@ -42,6 +42,13 @@ A ready-to-use **template repository** for developing applications with CodeIgni
    docker-compose up -d --build
    ```
 
+   ***Manual fix if need(per chatGPT):
+   after running docker-compose up -d --build
+
+   ```bash
+   docker-compose exec app composer install
+   ```
+
 5. Wait a moment for Composer autoload and dependencies to finish installing inside the container (first run may take a while)
 6. Access your app at http://localhost:8080 (or your configured port)
 7. Access phpMyAdmin at http://localhost:8081 (or your configured port)
@@ -75,6 +82,9 @@ Ci4_docker_skeleton/
   docker-compose build --no-cache
   docker-compose up -d
   ```
+
+  
+
 - Composer errors: Check required PHP extensions in Dockerfile
 
 ## License
