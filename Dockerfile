@@ -1,4 +1,4 @@
-FROM php:8.2-apache-bullseye
+FROM php:8.3-apache
 
 # Ensure all packages are up to date to reduce vulnerabilities
 RUN apt-get update && apt-get upgrade -y

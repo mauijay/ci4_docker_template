@@ -1,8 +1,13 @@
 <?php
 
 use CodeIgniter\Router\RouteCollection;
+use App\Controllers\HomeController;
+
 
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
+
+$routes->get('/', [HomeController::class, 'index']);
+
+service('auth')->routes($routes);
