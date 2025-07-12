@@ -1,4 +1,7 @@
-FROM php:8.2-apache
+FROM php:8.2-apache-bullseye
+
+# Ensure all packages are up to date to reduce vulnerabilities
+RUN apt-get update && apt-get upgrade -y
 
 # Install system dependencies for PHP extensions
 RUN apt-get update && apt-get install -y \
